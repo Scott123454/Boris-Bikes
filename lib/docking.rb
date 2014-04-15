@@ -18,11 +18,16 @@ DEFAULT_CAPACITY = 10
 	end
 
 	def dock(bike)
+		raise "Station is full" if full?
 		@bikes << bike
 	end
 
 	def release(bike)
 		@bikes.delete(bike)
+	end
+
+	def available_bikes
+		@bikes.reject {|bike| bike.broken?}
 	end
 
 end
