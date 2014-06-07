@@ -38,4 +38,16 @@ DEFAULT_CAPACITY = 10
 		bikes.reject {|bike| bike.broken?}
 	end
 
+	def accept(bike)
+		bike.fix
+		dock(bike)
+	end
+
+	def broken_bikes
+		bikes.select {|bike| bike.broken?}
+	end	
+
+
+
 end
+

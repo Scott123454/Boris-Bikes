@@ -8,13 +8,16 @@ DEFAULT_CAPACITY = 10
 	
 	def initialize(options = {})
 		
-
+		# DockingArray = []
 		self.capacity=options.fetch(:capacity, capacity)
 
 		# @capacity = options.fetch(:capacity, DEFAULT_CAPACITY)
 		# @bikes = []
 
 	end
+
+
+
 
 end
 
